@@ -1,4 +1,5 @@
 import 'package:final_exam/models/photo.dart';
+import 'package:final_exam/screens/photo_screen.dart';
 import 'package:final_exam/services/photo_service.dart';
 import 'package:flutter/material.dart';
 
@@ -14,6 +15,8 @@ class PhotolistScreen extends StatefulWidget {
 
 class _PhotolistScreenState extends State<PhotolistScreen> {
   List <Photo> _photos;
+  final PhotoService photoService = dependency();
+  
 
   @override
   
@@ -92,14 +95,40 @@ class _PhotolistScreenState extends State<PhotolistScreen> {
                 ],
               ),
             ),
-            title: SizedBox(
-              // height: 200.0,
-              child: Image.network(
-                "${_photos[index].thumbUrl}",
-                // "https://github.com/jumail-utm/map/blob/main/preview/photo1.jpg?raw=true",
-                fit: BoxFit.fitHeight,
-              ),
+            title: Column(
+              children: [
+                SizedBox(
+                  // height: 200.0,
+                  child: Image.network(
+                    "${_photos[index].thumbUrl}",
+                    // "https://github.com/jumail-utm/map/blob/main/preview/photo1.jpg?raw=true",
+                    fit: BoxFit.fitHeight,
+                  ),
+                ),
+              ],
             ),
+            onTap: () async{
+              Photo returnData = await Navigator.push(context,
+              MaterialPageRoute(builder: (context) => PhotoScreen(_photos[index])));
+              print(returnData);
+
+        if(returnData == null){}
+    else{    
+          setState(()=> _photos[index]= returnData);
+          final PhotoService photoService = dependency();
+
+          Photo updatedPhoto = await photoService.updateLike(
+                        id: _photos[index].id,
+                        likeNo: returnData.like,
+                      );
+          setState(() => _photos[index].like = updatedPhoto.like);
+          Photo updatedNewPhoto = await photoService.updateDislike(
+                        id: _photos[index].id,
+                        dislikeNo: returnData.dislike,
+                      );
+           setState(() => _photos[index].dislike = updatedNewPhoto.dislike);
+    }
+            },
           ),
         ),
       );
