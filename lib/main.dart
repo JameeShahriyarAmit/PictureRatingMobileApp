@@ -1,5 +1,6 @@
 //! This file is fully given. Do nothing on it.
 
+import 'package:final_exam/screens/photo_screen.dart';
 import 'package:flutter/material.dart';
 
 import 'dependencies.dart' as di;

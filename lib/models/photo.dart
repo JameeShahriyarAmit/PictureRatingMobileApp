@@ -4,6 +4,8 @@ class Photo {
   int id;
   String photoUrl, thumbUrl;
   int like, dislike;
+  int allowReset;
+  int allowDuplicate;
 
   Photo({
     this.id,
@@ -11,6 +13,8 @@ class Photo {
     this.thumbUrl,
     this.like,
     this.dislike,
+    this.allowReset,
+    this.allowDuplicate
   });
 
   Photo.copy(Photo from)
@@ -19,7 +23,28 @@ class Photo {
             photoUrl: from.photoUrl,
             thumbUrl: from.thumbUrl,
             like: from.like,
-            dislike: from.dislike);
+            dislike: from.dislike,
+            allowReset: from.allowReset,
+            allowDuplicate: from.allowDuplicate,
+            );
 
-  Photo.fromJson(Map<String, dynamic> json);
+  Photo.fromJson(Map<String, dynamic> json)
+      : this(id: json['id'], 
+             photoUrl: json['photoUrl'],
+             thumbUrl: json['thumbUrl'],
+             like: json['like'],
+             dislike: json['dislike'],
+             allowReset: json['allowReset'],
+             allowDuplicate: json['allowDuplicate'],
+             );
+
+  Map<String, dynamic> toJson() =>{
+    'id' : id,
+    'photoUrl' : photoUrl,
+    'thumbUrl' : thumbUrl,
+    'like' : like,
+    'dislike' : dislike,
+    'allowReset' : allowReset,
+    'allowDuplicate' : allowDuplicate,
+  } ;          
 }
