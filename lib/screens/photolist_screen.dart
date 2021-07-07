@@ -42,9 +42,18 @@ class _PhotolistScreenState extends State<PhotolistScreen> {
             color: Colors.blueGrey,
           ),
           itemBuilder: (context, index) => ListTile(
-            leading: IconButton(
-                icon: Icon(Icons.copy_rounded, color: Colors.green),
-                onPressed: () {}),
+            leading: Visibility(
+              visible: _photos[index].allowDuplicate!=0,
+              child: IconButton(
+                  icon: Icon(Icons.copy_rounded, color: Colors.green),
+                  onPressed: () async{
+                    final PhotoService photoService = dependency();
+                    final duplicatePhoto = await photoService.createPhotos(
+                      photo: Photo(photoUrl: _photos[index].photoUrl, thumbUrl: _photos[index].thumbUrl, like: 0, dislike: 0, allowReset: 0, allowDuplicate: 0 )
+                    );
+                    setState(() => _photos.add(duplicatePhoto));
+                  }),
+            ),
             trailing: SizedBox(
               width: 180.0,
               child: Row(
@@ -55,7 +64,14 @@ class _PhotolistScreenState extends State<PhotolistScreen> {
                     size: 25.0,
                     color: Colors.green, // Colors.red,
                     count: _photos[index].like,
-                    onPressed: () {},
+                    onPressed:() async{
+                      final PhotoService photoService = dependency();
+                      Photo updatedPhoto = await photoService.updateLike(
+                        id: _photos[index].id,
+                        likeNo: _photos[index].like +1,
+                      );
+                      setState(() => _photos[index].like = updatedPhoto.like);
+                    },
                   ),
                   SizedBox(width: 15.0),
                   ThumbButton(
@@ -63,7 +79,14 @@ class _PhotolistScreenState extends State<PhotolistScreen> {
                     size: 25.0,
                     color: Colors.red, // Colors.red,
                     count: _photos[index].dislike,
-                    onPressed: () {},
+                    onPressed: () async{
+                      final PhotoService photoService = dependency();
+                      Photo updatedNewPhoto = await photoService.updateDislike(
+                        id: _photos[index].id,
+                        dislikeNo: _photos[index].dislike +1,
+                      );
+                      setState(() => _photos[index].dislike = updatedNewPhoto.dislike);
+                    },
                   ),
                    // space between thumb icons
                 ],
