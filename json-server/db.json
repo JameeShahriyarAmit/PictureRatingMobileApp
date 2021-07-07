@@ -1,0 +1,54 @@
+{
+  "photos": [
+    {
+      "id": 1,
+      "photoUrl": "http://gmm.fc.utm.my/~jumail/photos/photo1.jpg",
+      "thumbUrl": "http://gmm.fc.utm.my/~jumail/preview/photo1.jpg",
+      "like": 5,
+      "dislike": 2,
+      "allowReset": 1,
+      "allowDuplicate": 0
+    },
+    {
+      "id": 2,
+      "photoUrl": "http://gmm.fc.utm.my/~jumail/photos/photo2.jpg",
+      "thumbUrl": "http://gmm.fc.utm.my/~jumail/preview/photo2.jpg",
+      "like": 5,
+      "dislike": 7,
+      "allowReset": 0,
+      "allowDuplicate": 0
+    },
+    {
+      "id": 3,
+      "photoUrl": "http://gmm.fc.utm.my/~jumail/photos/photo3.jpg",
+      "thumbUrl": "http://gmm.fc.utm.my/~jumail/preview/photo3.jpg",
+      "like": 3,
+      "dislike": 0,
+      "allowReset": 0,
+      "allowDuplicate": 1
+    },
+    {
+      "id": 4,
+      "photoUrl": "http://gmm.fc.utm.my/~jumail/photos/photo4.jpg",
+      "thumbUrl": "http://gmm.fc.utm.my/~jumail/preview/photo4.jpg",
+      "like": 2,
+      "dislike": 2,
+      "allowReset": 1,
+      "allowDuplicate": 0
+    },
+    {
+      "id": 5,
+      "photoUrl": "http://gmm.fc.utm.my/~jumail/photos/photo5.jpg",
+      "thumbUrl": "http://gmm.fc.utm.my/~jumail/preview/photo5.jpg",
+      "like": 3,
+      "dislike": 2,
+      "allowReset": 1,
+      "allowDuplicate": 1
+    },
+    {
+      "photoUrl": "http://gmm.fc.utm.my/~jumail/photos/photo1.jpg",
+      "thumbUrl": "http://gmm.fc.utm.my/~jumail/preview/photo1.jpg",
+      "id": 6
+    }
+  ]
+}

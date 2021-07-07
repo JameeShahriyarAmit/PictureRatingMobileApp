@@ -1,0 +1,49 @@
+{
+  "photos": [
+    {
+      "id": 1,
+      "photoUrl": "https://github.com/jumail-utm/map/blob/main/photos/photo1.jpg?raw=true",
+      "thumbUrl": "https://github.com/jumail-utm/map/blob/main/previews/photo1.jpg?raw=true",
+      "like": 5,
+      "dislike": 2,
+      "allowReset": 1,
+      "allowDuplicate": 0
+    },
+    {
+      "id": 2,
+      "photoUrl": "https://github.com/jumail-utm/map/blob/main/photos/photo2.jpg?raw=true",
+      "thumbUrl": "https://github.com/jumail-utm/map/blob/main/previews/photo2.jpg?raw=true",
+      "like": 5,
+      "dislike": 7,
+      "allowReset": 0,
+      "allowDuplicate": 0
+    },
+    {
+      "id": 3,
+      "photoUrl": "https://github.com/jumail-utm/map/blob/main/photos/photo3.jpg?raw=true",
+      "thumbUrl": "https://github.com/jumail-utm/map/blob/main/previews/photo3.jpg?raw=true",
+      "like": 3,
+      "dislike": 0,
+      "allowReset": 0,
+      "allowDuplicate": 1
+    },
+    {
+      "id": 4,
+      "photoUrl": "https://github.com/jumail-utm/map/blob/main/photos/photo4.jpg?raw=true",
+      "thumbUrl": "https://github.com/jumail-utm/map/blob/main/previews/photo4.jpg?raw=true",
+      "like": 2,
+      "dislike": 2,
+      "allowReset": 1,
+      "allowDuplicate": 0
+    },
+    {
+      "id": 5,
+      "photoUrl": "https://github.com/jumail-utm/map/blob/main/photos/photo5.jpg?raw=true",
+      "thumbUrl": "https://github.com/jumail-utm/map/blob/main/previews/photo5.jpg?raw=true",
+      "like": 3,
+      "dislike": 2,
+      "allowReset": 1,
+      "allowDuplicate": 1
+    }
+  ]
+}
