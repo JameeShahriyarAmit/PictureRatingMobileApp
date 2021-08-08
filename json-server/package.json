@@ -1,9 +1,9 @@
 {
   "description": "SCSJ3623 Mobile Application Programming\r Semester 2, 2020/2021",
   "scripts": {
-    "server": "json-server --host 192.168.0.100 db.json",
+    "server": "json-server --host 192.168.0.105 db.json",
     "localhost": "json-server --host localhost db.json",
-    "server2": "json-server --host 192.168.0.100 db2.json",
+    "server2": "json-server --host 192.168.0.105 db2.json",
     "localhost2": "json-server --host localhost db2.json"
   }
 }

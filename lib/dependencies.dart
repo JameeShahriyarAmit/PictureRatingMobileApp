@@ -11,7 +11,7 @@ void init() {
   dependency.registerLazySingleton<RestService>(
     () => RestService(
         baseUrl:
-            'http://192.168.0.100:3000'), // Change the IP address according to your own computer IP address. Remain the port number to 3000
+            'http://192.168.0.105:3000'), // Change the IP address according to your own computer IP address. Remain the port number to 3000
   );
 
   dependency.registerLazySingleton<PhotoService>(() => PhotoService());

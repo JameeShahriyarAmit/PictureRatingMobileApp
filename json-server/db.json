@@ -40,8 +40,8 @@
       "id": 5,
       "photoUrl": "http://gmm.fc.utm.my/~jumail/photos/photo5.jpg",
       "thumbUrl": "http://gmm.fc.utm.my/~jumail/preview/photo5.jpg",
-      "like": 3,
-      "dislike": 2,
+      "like": 0,
+      "dislike": 0,
       "allowReset": 1,
       "allowDuplicate": 1
     },
